@@ -6,19 +6,25 @@ import javax.xml.bind.annotation.XmlRootElement;
 /**
  * Created by yhhan on 15. 8. 12..
  */
-public class Greeting {
+@XmlRootElement(name = "Greeting")
+public class GreetingXML {
     private long id;
     private String content;
 
-    public Greeting(long id, String content) {
+    public GreetingXML() {
+    }
+
+    public GreetingXML(long id, String content) {
         this.id = id;
         this.content = content;
     }
 
+    @XmlElement
     public long getId() {
         return id;
     }
 
+    @XmlElement
     public String getContent() {
         return content;
     }
