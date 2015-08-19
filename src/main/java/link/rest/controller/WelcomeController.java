@@ -35,7 +35,16 @@ public class WelcomeController {
     @RequestMapping("/mybatis")
     @ResponseBody
     public String mybatis() {
-        Test testObject = testMapper.findOne(1);
-        return testObject.getText();
+        Test newTestObject = new Test();
+        newTestObject.setText("insert test");
+        testMapper.insert(newTestObject);
+        System.out.println("newTestObject = " + newTestObject);
+
+        Test storedTestObject = testMapper.findOne(newTestObject.getId());
+        storedTestObject.setText("update test");
+        testMapper.update(storedTestObject);
+        System.out.println("storedTestObject = " + storedTestObject);
+
+        return storedTestObject.getText();
     }
 }
