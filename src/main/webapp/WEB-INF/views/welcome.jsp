@@ -13,7 +13,8 @@ Spring URL: ${springUrl} at ${time}
 <br>
 JSTL URL: ${url}
 <br>
-Message: ${message}
+Message: ${message}<br/>
+Environment: ${environment}
 </body>
 </html>
 
