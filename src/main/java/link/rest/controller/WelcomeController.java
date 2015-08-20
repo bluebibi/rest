@@ -24,14 +24,14 @@ public class WelcomeController {
     @Value("${application.message:Hello World}")
     private String message = "Hello World";
 
-    @Value("${environment.text}")
-    private String environment;
+    @Value("${env.text}")
+    private String env;
 
     @RequestMapping("/")
     public String welcome(Model model) {
         model.addAttribute("time", new Date());
         model.addAttribute("message", this.message);
-        model.addAttribute("environment", environment);
+        model.addAttribute("env", env);
         return "welcome";
     }
 
