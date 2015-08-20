@@ -14,7 +14,6 @@ Spring URL: ${springUrl} at ${time}
 JSTL URL: ${url}
 <br>
 Message: ${message}<br/>
-Environment: ${env}
 </body>
 </html>
 

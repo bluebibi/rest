@@ -31,8 +31,13 @@ public class WelcomeController {
     public String welcome(Model model) {
         model.addAttribute("time", new Date());
         model.addAttribute("message", this.message);
-        model.addAttribute("env", env);
         return "welcome";
+    }
+
+    @RequestMapping("/env")
+    @ResponseBody
+    public String env() {
+        return env;
     }
 
     @RequestMapping("/mybatis")
