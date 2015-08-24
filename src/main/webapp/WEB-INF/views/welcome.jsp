@@ -5,6 +5,7 @@
 <html>
 <head>
     <title></title>
+    <link href="css/normalize.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <c:url value="http://www.google.com" var="url"/>
@@ -14,7 +15,9 @@ Spring URL: ${springUrl} at ${time}
 JSTL URL: ${url}
 <br>
 Message: ${message}<br/>
+<img src="images/Spring-Boot-Logo.png" style="width:50px; height:50px"/>
 </body>
+<script src="js/jquery-1.11.3.js" type="text/javascript"></script>
 </html>
 
 
